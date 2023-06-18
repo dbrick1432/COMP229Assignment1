@@ -1,5 +1,5 @@
-<%- include partials/header.ejs %>
- <%- include partials/top_nav.ejs %>
+<%- include ../partials/header.ejs %>
+ <%- include ../partials/top_nav.ejs %>
 <div class="container">
     <div class="row">
         <div class="offset-md-3 col-md-6">
@@ -11,28 +11,36 @@
                 <div class="form-group">
                     <label for="nameTextField">UserName: </label>
                     <input type="text" class="form-control" id="nameTextField" placeholder="Enter the username"
-                        name="username" value="<%= contact.username %>" required>
+                        name="username" 
+                        value = "<%=<contacts.username%>"
+                        required>
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="emailTextField">Email: </label>
                     <input type="text" class="form-control" id="emailTextField"
-                        placeholder="Enter the email address" name="email" value="<%= contact.email %>"
+                        placeholder="Enter the email address" name="email" 
+                        value="<%= contacts.email%>"
                         required>
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="passwordField">Password: </label>
                     <input type="text" class="form-control" id="passwordField" placeholder="Enter a password"
-                        name="password" value="<%= contact.password %>" required>
+                        name="password" 
+                        value="<%=contacts.password%>"
+                        required>
                 </div>
                 <br>
-                <button class="btn btn-primary" type="submit"><i class="fas fa-edit"></i> Confirm</button>
+                <button class="btn btn-primary" type="submit"><i class="fas fa-edit"></i> Submit</button>
                 <a href="/contact-list" class="btn btn-warning"><i class="fas fa-undo"></i> Cancel</a>
             </form>
         </div>
     </div>
 </div>
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>
+
 
 
 
